@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 62.5%;
+}
+
+:root {
+    --color-light: #eee;
+    --color-dark: #222831;
+    --color-orange: #db6400;
+
+    --background: var(--color-light);
+    --foreground: var(--color-dark);
+
+}
+
+.darkmode {
+    --color-light: #eee;
+    --color-dark: #222831;
+    --color-orange: #db6400;
+
+    --background: var(--color-dark);
+    --foreground: var(--color-light);
+}
+
+body {
+    background: var(--background);
+    color: var(--foreground)
+}
+
+.main {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.intro-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.intro-text h1 {
+    font-size: 3rem;
+    line-height: 1.3;
+}
+
+.intro-text > * {
+    margin-bottom: 1rem; 
+}
+
+.buttons .btn {
+    font-size: 1.4rem;
+}
+
+.buttons .btn:first-child {
+    margin-right: 1rem;
+}
+
+
+.intro-img {
+    text-align: center;
+}
+
+.intro-img img {
+    width: 50%;
+}
+
+footer {
+    width: 100%;
+    height: 10vh;
+    background: var(--foreground);
+    color: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p{
+    font-size: 1.4rem;
+}
+
+.toggle-darkmode {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    border: 1px solid var(--foreground);
+    padding: 4px;
+    cursor: pointer;
+}
+
+.toggle-darkmode .toggle-text {
+    font-size: 1.6rem;
+    margin-right: 3px;
+    font-weight: 600;
+}
